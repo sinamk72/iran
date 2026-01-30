@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Email US Senators</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body { font-family: Arial; max-width: 600px; margin: auto; padding: 20px; }
+  button { display: block; margin: 10px 0; padding: 12px; width: 100%; font-size: 16px; background: #b30000; color: white; border: none; border-radius: 6px; }
+  button:hover { background: #8c0000; }
+</style>
+</head>
+<body>
+
+<h2>Email US Senators About Iran</h2>
+<p>Click a button to open an email draft.</p>
+
+<button onclick="sendEmail('ted_cruz@cruz.senate.gov','Concern about Human Rights in Iran','Dear Senator Cruz,%0A%0AI am writing to urge you to condemn ongoing executions in Iran.%0A%0AThank you,%0A[Your Name]')">Email Ted Cruz</button>
+
+<button onclick="sendEmail('marco_rubio@rubio.senate.gov','Concern about Human Rights in Iran','Dear Senator Rubio,%0A%0AI am writing to urge you to condemn ongoing executions in Iran.%0A%0AThank you,%0A[Your Name]')">Email Marco Rubio</button>
+
+<script>
+function sendEmail(to, subject, body){
+  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+}
+</script>
+
+</body>
+</html>
